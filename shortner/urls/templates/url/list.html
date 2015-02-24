@@ -1,6 +1,8 @@
 {% extends 'common/base.html' %}
 {% block content %}
-{% for url in urls %}
-{{ url.url }}
-{% endfor %}
+    <ul>
+        {% for url in urls %}
+            <li>{{ url.hash }} - {{ url.url }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
