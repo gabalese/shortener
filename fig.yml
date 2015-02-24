@@ -1,0 +1,18 @@
+db:
+    image: postgres
+    environment:
+        USER: docker
+        PASS: docker
+        DB: docker
+web:
+    build: .
+    environment:
+        DJANGO_SETTINGS_MODULE: shortner.settings.docker
+    working_dir: /code/shortner
+    command: sh /code/docker/django-init.sh
+    volumes:
+        - .:/code
+    ports:
+        - "8000:8000"
+    links: 
+        - db
