@@ -1,11 +1,5 @@
-db:
-    image: postgres
-    environment:
-        USER: docker
-        PASS: docker
-        DB: docker
 web:
-    build: .
+    build: app
     environment:
         DJANGO_SETTINGS_MODULE: shortner.settings.docker
     working_dir: /code/shortner
@@ -14,5 +8,3 @@ web:
         - .:/code
     ports:
         - "8000:8000"
-    links: 
-        - db
