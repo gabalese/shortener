@@ -37,7 +37,7 @@ DJANGO_APPS = (
 
 SHORTNER_APPS = (
     'urls',
-    'shortner'
+    'shortener'
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -58,9 +58,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'shortner.urls'
+ROOT_URLCONF = 'shortener.urls'
 
-WSGI_APPLICATION = 'shortner.wsgi.application'
+WSGI_APPLICATION = 'shortener.wsgi.application'
 
 
 # Database
