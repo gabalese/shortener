@@ -3,5 +3,6 @@
 ## Set up dev environment
 
 ```
-$ fig up
+make build
+fig up
 ```

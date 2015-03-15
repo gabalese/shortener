@@ -1,10 +1,6 @@
 web:
-    build: app
+    image: shortener-app
     environment:
         DJANGO_SETTINGS_MODULE: shortner.settings.docker
-    working_dir: /code/shortner
-    command: sh /code/docker/django-init.sh
-    volumes:
-        - .:/code
     ports:
         - "8000:8000"

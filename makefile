@@ -1,8 +1,11 @@
 build: build_app build_elasticsearch
-	echo "Build all"
 
 build_elasticsearch:
-	echo "Build elasticsearch"
+	cp docker/elasticsearch/Dockerfile .
+	docker build -t shortener-elasticsearch .
+	rm Dockerfile
 
 build_app:
-	docker build -t shortener-app docker/app/
+	cp docker/app/Dockerfile .
+	docker build -t shortener-app .
+	rm Dockerfile
