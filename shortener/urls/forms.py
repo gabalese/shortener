@@ -6,7 +6,7 @@ from .models import URL, Collection
 class URLForm(ModelForm):
     class Meta:
         model = URL
-        fields = ('url',)
+        fields = ('original_url',)
 
 
 class CollectionForm(ModelForm):

@@ -2,7 +2,9 @@
 {% block content %}
     <ul>
         {% for url in urls %}
-            <li>{{ url.hash }} - {{ url.url }}</li>
+            <li>
+                <a href="{{ url.get_url }}">{{url.get_url}}</a> - {{ url.url }}
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}

@@ -98,6 +98,8 @@ coverage.xml
 
 # Django stuff:
 *.log
+*.sqlite3
+.vagrant/
 
 # Sphinx documentation
 docs/_build/
